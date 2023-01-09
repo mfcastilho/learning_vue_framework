@@ -1,1 +1,1 @@
-# Learning about vue framework
+# Learning about Vue framework
