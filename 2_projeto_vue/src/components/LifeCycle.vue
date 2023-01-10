@@ -17,6 +17,7 @@ export default{
     setTimeout(()=>{
       this.name = "Mario"
     }, 2000)
+    lifeCycleMethod()
     
   },
   mounted(){
@@ -24,7 +25,14 @@ export default{
     setTimeout(()=>{
       this.name = "Frederico"
     }, 4000)
+
+    lifeCycleMethod()
     
+  },
+  methods:{
+    lifeCycleMethod(){
+      console.log("Executou")
+    }
   }
 }
 </script>

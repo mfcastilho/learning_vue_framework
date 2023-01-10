@@ -12,7 +12,7 @@
       <li>MySQL</li>
     </ul>
     <div>
-      <button @click="showEmail">Mostrar e-mail</button>
+      <button @click="showEmail">{{ button_text }}</button>
     </div>
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
     <p>
@@ -34,10 +34,21 @@ export default {
   data() {
     return {
       esta_trabalhando: true,
-      mostrar_email: true,
+      mostrar_email: false,
       email: "frederico@mail.com",
       meu_link: "https://mfcastilho.github.io/challenge3-portifolio/",
+      button_text: "Mostrar e-mail",
     };
+  },
+  methods: {
+    showEmail() {
+      this.mostrar_email = !this.mostrar_email;
+      if (!this.mostrar_email) {
+        this.button_text = "Mostrar e-mail";
+      } else {
+        this.button_text = "Ocultar e-mail";
+      }
+    },
   },
 };
 </script>
