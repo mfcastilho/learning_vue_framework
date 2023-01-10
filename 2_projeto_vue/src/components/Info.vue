@@ -12,13 +12,20 @@
       <li>MySQL</li>
     </ul>
     <p v-show="mostrar_email">Mande uma mensagem para: {{email}}</p>
+    <Picture />
   </div>
 </template>
 
 <script>
 
+import Picture from "../components/Picture.vue"
+
+
 export default{
   name: "Info",
+  components: {
+    Picture
+  },
   data(){
     return{
       esta_trabalhando: true,
