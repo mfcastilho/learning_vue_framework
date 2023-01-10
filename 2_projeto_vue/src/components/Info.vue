@@ -11,28 +11,33 @@
       <li>CSS</li>
       <li>MySQL</li>
     </ul>
-    <p v-show="mostrar_email">Mande uma mensagem para: {{email}}</p>
+    <div>
+      <button @click="showEmail">Mostrar e-mail</button>
+    </div>
+    <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+    <p>
+      Para acessar mewu portifólio ,
+      <a v-bind:href="meu_link" target="_blank">basta acessar aqui</a>
+    </p>
     <Picture />
   </div>
 </template>
 
 <script>
+import Picture from "../components/Picture.vue";
 
-import Picture from "../components/Picture.vue"
-
-
-export default{
+export default {
   name: "Info",
   components: {
-    Picture
+    Picture,
   },
-  data(){
-    return{
+  data() {
+    return {
       esta_trabalhando: true,
       mostrar_email: true,
-      email: "frederico@mail.com"
-    }
-  }
-}
-
+      email: "frederico@mail.com",
+      meu_link: "https://mfcastilho.github.io/challenge3-portifolio/",
+    };
+  },
+};
 </script>
