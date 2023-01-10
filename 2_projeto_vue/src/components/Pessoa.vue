@@ -10,6 +10,7 @@
 import Info from "./Info.vue";
 import Form from "./Form.vue";
 
+
 export default {
   name: "Pessoa",
   components: {

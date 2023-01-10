@@ -12,18 +12,27 @@
       <li>MySQL</li>
     </ul>
     <p v-show="mostrar_email">Mande uma mensagem para: {{email}}</p>
+    <p>Para acessar o meu portifólio, <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p>
+    <Picture />
   </div>
+  
 </template>
 
 <script>
 
+import Picture from "../components/Picture.vue"
+
 export default{
   name: "Info",
+  components:{
+    Picture
+  },
   data(){
     return{
       esta_trabalhando: true,
       mostrar_email: true,
-      email: "frederico@mail.com"
+      email: "frederico@mail.com",
+      meu_link:"https://mfcastilho.github.io/challenge3-portifolio/"
     }
   }
 }
