@@ -1,1 +1,1 @@
-# learning_vue_framework
+# Learning about Vue framework
