@@ -2,14 +2,13 @@
   <div>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades!</p>
-    <p>Utilizo as seguintes tecnologias:</p>
+    <p>Utilizo as seguintes tecnologias para back-end:</p>
     <ul>
-      <li>JavaScript</li>
-      <li>Java</li>
-      <li>Python</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>MySQL</li>
+      <li v-for="(technology, index) in backend_technologies" v-bind:key="index">{{technology}}</li>
+    </ul>
+    <p>Utilizo as seguintes tecnologias para Front-end:</p>
+    <ul>
+      <li v-for="(technology) in frontend_technologies" v-bind:key="technology.id">{{technology.language}}</li>
     </ul>
     <div>
       <button @click="showEmail">{{ button_text }}</button>
@@ -38,6 +37,21 @@ export default {
       email: "frederico@mail.com",
       meu_link: "https://mfcastilho.github.io/challenge3-portifolio/",
       button_text: "Mostrar e-mail",
+      backend_technologies: ["Nodejs", "PHP", "Java", "Python"],
+      frontend_technologies: [
+        {
+          id: 1,
+          language: "Javascript"
+        },
+        {
+          id: 2,
+          language: "HTML"
+        },
+        {
+          id: 3,
+          language: "CSS"
+        }
+      ]
     };
   },
   methods: {
