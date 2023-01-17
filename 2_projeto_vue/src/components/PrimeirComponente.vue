@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import MultiplosEventos from "./MultiplosEventos.vue"
+  import MultiplosEventos from "./MultiplesEvents.vue"
 
 
   export default {
