@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Esta é a descrição da pessoa: {{ name }}</h2>
-    <Info />
+    <Info v-bind:email="email" v-bind:esta_trabalhando=false />
     <Form />
     <Reutilizacao/>
   </div>
@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       name: "Amanda",
+      email: "amanda@mail.com"
     };
   },
 };
