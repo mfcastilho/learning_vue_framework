@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{compEmail}}</p>
+    <p>{{email}}</p>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades!</p>
     <p>Utilizo as seguintes tecnologias para back-end:</p>
